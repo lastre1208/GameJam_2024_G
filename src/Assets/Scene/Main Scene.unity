@@ -771,8 +771,9 @@ MonoBehaviour:
   obstcleScript: {fileID: 1699438957}
   obstcalesPrehab:
   - {fileID: 570216904917371534, guid: 14fab4fd2e6692c43a9b26838939fddb, type: 3}
+  - {fileID: 874295126150278071, guid: 1d915e9932bc3b9438b38ea10c9d20f8, type: 3}
   CreateDistanseRange: 10
-  CreateTimeInterval: 1
+  CreateTimeInterval: 1.2
 --- !u!4 &2028009179
 Transform:
   m_ObjectHideFlags: 0
@@ -796,13 +797,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 340871647987233642, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
+      propertyPath: addSpeed
+      value: 0.015
+      objectReference: {fileID: 0}
+    - target: {fileID: 340871647987233642, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
+      propertyPath: maxSpeed
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 340871647987233642, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
+      propertyPath: decreaseSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1719357578052683276, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1719357578052683276, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1719357578052683276, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: m_LocalPosition.z
@@ -854,7 +867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1966821610267650566, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: m_Interpolate
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1966821610267650566, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: m_IsKinematic
@@ -862,11 +875,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1966821610267650566, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: m_CollisionDetection
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1966821610267650566, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: m_IncludeLayers.m_Bits
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048084259412479126, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4503060823170681404, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: rb
@@ -878,7 +895,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4503060823170681404, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: moveSpeed
-      value: 6
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 4674036199924942588, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: m_Name
@@ -886,6 +903,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4674036199924942588, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674036199924942588, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 5333290121177263167, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8680636927108135143, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8680636927108135143, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
