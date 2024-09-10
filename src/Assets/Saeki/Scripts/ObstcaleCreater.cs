@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 public class ObstcaleCreater : MonoBehaviour
 {
     [SerializeField]
     ObstcleMove obstcleScript;
 
+    [SerializeField]
+    MoveDistanceCounter counter;
+    [SerializeField]
+    GameOverFlag gameOverFlag;
     [SerializeField]
     GameObject[] obstcalesPrehab;
 
@@ -23,6 +28,11 @@ public class ObstcaleCreater : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gameOverFlag.GetGameOver()|| counter.GetCrear())    
+            return;
+        
+           
+
         timeCount += Time.deltaTime;
         if(timeCount > CreateTimeInterval)
         {

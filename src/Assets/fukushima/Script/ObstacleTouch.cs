@@ -17,8 +17,8 @@ public class ObstacleTouch : MonoBehaviour
         if (other.CompareTag("Player"))
         {
                 Debug.Log("Hit!");
-          PlayerParameter p = other.GetComponent<PlayerParameter>();
-            p.Onlife = false;
+          PlayerParameter parameter = other.GetComponent<PlayerParameter>();
+            parameter.Onlife = false;
         }
     }
 }
