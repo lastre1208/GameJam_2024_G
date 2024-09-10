@@ -5,7 +5,8 @@ using UnityEngine;
 public class ObstcleMove : MonoBehaviour
 {
     [SerializeField]
-    float UpMoveSpeed = 3f;
+    PlayerParameter playerParameter;
+   
     [SerializeField]
     PlayerMove playerscript;
     List<GameObject> obstacles = new List<GameObject>();
@@ -22,7 +23,7 @@ public class ObstcleMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerscript.Onlife)
+        if(playerParameter.Onlife)
             MovePos();
     }
 
@@ -31,7 +32,7 @@ public class ObstcleMove : MonoBehaviour
     {
         foreach (var obstacle in obstacles)
         {
-            obstacle.transform.Translate(Vector3.up * Time.deltaTime * UpMoveSpeed);
+            obstacle.transform.Translate(Vector3.up * Time.deltaTime *playerParameter.GetLandingSpeed());
         }
     }
 }

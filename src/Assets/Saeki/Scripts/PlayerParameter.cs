@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerParameter : MonoBehaviour
 {
     private bool WallHitFlag { get; set; }
-
+    public bool Onlife = true;
     [SerializeField]
     float landingSpeed,maxSpeed, minSpeed;
     [SerializeField]
@@ -25,7 +25,7 @@ public class PlayerParameter : MonoBehaviour
 
     public void SetHitPoint(float value)
     {
-        if (value <= minPoint || value >= maxPoint)
+        if (value < minPoint || value >= maxPoint)
             return;
         hitPoint = value;
     }
@@ -36,15 +36,18 @@ public class PlayerParameter : MonoBehaviour
     }
     private void Update()
     {
+       
         if (WallHitFlag)
         {
             SetLandingSpeed(landingSpeed - decreaseSpeed);
             SetHitPoint(hitPoint - decreaseHitPoint);
+            
         }
         else
         {
             SetLandingSpeed(landingSpeed + addSpeed);
             SetHitPoint(hitPoint + addHitPoint);
+            
         }
     }
 }

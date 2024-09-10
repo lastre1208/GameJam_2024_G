@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ObstacleTouch : MonoBehaviour
 {
+
     private void Start()
     {  
         //playerMove = GetComponent<PlayerMove>();
@@ -16,8 +17,8 @@ public class ObstacleTouch : MonoBehaviour
         if (other.CompareTag("Player"))
         {
                 Debug.Log("Hit!");
-            PlayerMove playerMove = other.GetComponent<PlayerMove>();
-            playerMove.Onlife = false;
+          PlayerParameter p = other.GetComponent<PlayerParameter>();
+            p.Onlife = false;
         }
     }
 }
