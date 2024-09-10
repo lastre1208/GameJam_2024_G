@@ -12,12 +12,14 @@ public class ObstcaleCreater : MonoBehaviour
     GameObject[] obstcalesPrehab;
 
     [SerializeField]
-    float CreateDistanseRange;
+    int CreateDistanseRange;
 
     [SerializeField]
     float CreateTimeInterval;
 
     float timeCount = 0;
+
+    int BeforeValue = 0;
     // Update is called once per frame
     void Update()
     {
@@ -29,6 +31,15 @@ public class ObstcaleCreater : MonoBehaviour
         }
     }
 
+    int GetRandomNum(int range)
+    {
+        int random = Random.Range(-range,range);
+        return random == BeforeValue ? GetRandomNum(range) : random;
+    }
+
+
+
+
     void Createobstcale(GameObject[] prehabs)
     {
         if (prehabs == null || prehabs.Length == 0)
@@ -37,7 +48,7 @@ public class ObstcaleCreater : MonoBehaviour
         int RandomNum = Random.Range(0, prehabs.Length);
 
         Vector3 CreatePos = transform.position;
-        CreatePos.x = Random.Range(-CreateDistanseRange, CreateDistanseRange);
+        CreatePos.x = (float)GetRandomNum(CreateDistanseRange);
 
         GameObject gameObject = GameObject.Instantiate(prehabs[RandomNum],
            CreatePos, Quaternion.identity);
