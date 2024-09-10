@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObstacleTouch : MonoBehaviour
 {
-    public Collider target;
+  
     PlayerMove playerMove;
     private void Start()
     {
