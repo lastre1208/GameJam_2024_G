@@ -15,11 +15,11 @@ public class PlayerMove : MonoBehaviour
             float moveInput = Input.GetAxisRaw("Horizontal");
 
             // 左矢印キー、右矢印キーの入力を追加
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
             {
                 moveInput = -1f;
             }
-            else if (Input.GetKey(KeyCode.RightArrow))
+            else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
             {
                 moveInput = 1f;
             }
@@ -38,10 +38,8 @@ public class PlayerMove : MonoBehaviour
                     rb.velocity = new(moveLimit,0,0);
                 }
                 else
-                {
-                    
-                        rb.velocity = new(-moveLimit, 0, 0);
-                     
+                {                   
+                    rb.velocity = new(-moveLimit, 0, 0);     
                 }
             }
         }
