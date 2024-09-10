@@ -37,18 +37,24 @@ public class PlayerParameter : MonoBehaviour
     }
     private void Update()
     {
-       
+        if (Onlife)
+            fluctuation();
+
+        if (GetHitPoint() < 0)
+            Onlife = false;
+    }
+
+    private void fluctuation()
+    {
         if (WallHitFlag)
         {
             SetLandingSpeed(landingSpeed - decreaseSpeed);
             SetHitPoint(hitPoint - decreaseHitPoint);
-            
         }
         else
         {
             SetLandingSpeed(landingSpeed + addSpeed);
             SetHitPoint(hitPoint + addHitPoint);
-            
         }
     }
 }

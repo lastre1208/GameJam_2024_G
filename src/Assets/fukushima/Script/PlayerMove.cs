@@ -12,7 +12,7 @@ public class PlayerMove : MonoBehaviour
         if (parameter.Onlife)
         {
             // Aキー、Dキー、左矢印キー、右矢印キーでの移動入力を取得
-            float moveInput = Input.GetAxisRaw("Horizontal");
+            float moveInput = 0f;
 
             // 左矢印キー、右矢印キーの入力を追加
             if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
@@ -42,6 +42,11 @@ public class PlayerMove : MonoBehaviour
                     rb.velocity = new(-moveLimit, 0, 0);     
                 }
             }
+        }
+        else
+        {
+            rb.velocity = Vector3.zero;
+            rb.isKinematic = true;
         }
     }
 }

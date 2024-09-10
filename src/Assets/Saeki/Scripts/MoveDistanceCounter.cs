@@ -8,12 +8,15 @@ public class MoveDistanceCounter : MonoBehaviour
     float DistanseLimit;
     [SerializeField]
     PlayerParameter parameter;
+    [SerializeField]
+    GameOverFlag gameOverFlag;
+
     float landingDistanse = 0;
 
     bool IsCrear = false;
 
 
-    bool GetCrear() => IsCrear;
+    public bool GetCrear() => IsCrear;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +26,9 @@ public class MoveDistanceCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gameOverFlag.GetGameOver())
+            return;
+
         landingDistanse += parameter.GetLandingSpeed();
         if(DistanseLimit <= landingDistanse)
         {

@@ -9,6 +9,7 @@ public class ObstcleMove : MonoBehaviour
    
     [SerializeField]
     PlayerMove playerscript;
+
     List<GameObject> obstacles = new List<GameObject>();
 
     public void AddObstacle(GameObject remove)
@@ -32,7 +33,7 @@ public class ObstcleMove : MonoBehaviour
     {
         foreach (var obstacle in obstacles)
         {
-            obstacle.transform.Translate(Vector3.up * Time.deltaTime *playerParameter.GetLandingSpeed());
+            obstacle.transform.Translate(Vector3.up * Time.deltaTime * playerParameter.GetLandingSpeed());
         }
     }
 }
