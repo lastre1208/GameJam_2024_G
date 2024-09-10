@@ -799,15 +799,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 340871647987233642, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: addSpeed
-      value: 0.015
+      value: 0.005
       objectReference: {fileID: 0}
     - target: {fileID: 340871647987233642, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: maxSpeed
       value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 340871647987233642, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
+      propertyPath: landingSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 340871647987233642, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: decreaseSpeed
-      value: 0.1
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 1719357578052683276, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: m_LocalPosition.x
