@@ -6,6 +6,8 @@ public class ObstcleMove : MonoBehaviour
 {
     [SerializeField]
     float UpMoveSpeed = 3f;
+    [SerializeField]
+    PlayerMove playerscript;
     List<GameObject> obstacles = new List<GameObject>();
 
     public void AddObstacle(GameObject remove)
@@ -20,7 +22,8 @@ public class ObstcleMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MovePos();
+        if(playerscript.Onlife)
+            MovePos();
     }
 
     //List内のオブジェクトの移動

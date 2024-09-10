@@ -1,15 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ObstacleTouch : MonoBehaviour
 {
-  
-    PlayerMove playerMove;
     private void Start()
-    {
-        
-        playerMove = GetComponent<PlayerMove>();
+    {  
+        //playerMove = GetComponent<PlayerMove>();
     }
     // Start is called before the first frame update
     // Update is called once per frame
@@ -17,10 +15,9 @@ public class ObstacleTouch : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-
-                Debug.Log("aaaa");
+                Debug.Log("Hit!");
+            PlayerMove playerMove = other.GetComponent<PlayerMove>();
             playerMove.Onlife = false;
-            
         }
     }
 }
