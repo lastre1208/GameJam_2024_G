@@ -12,9 +12,17 @@ public class ObstcleMove : MonoBehaviour
 
     List<GameObject> obstacles = new List<GameObject>();
 
-    public void AddObstacle(GameObject remove)
+    public void AddObstacle(GameObject parentObject)
     {
-        obstacles.Add(remove);
+        int childCount = parentObject.transform.childCount;
+
+        for (int i = 0; i < childCount; i++)
+        {
+            GameObject childObject = parentObject.transform.GetChild(i).gameObject;
+            obstacles.Add(childObject);      
+        }
+        parentObject.transform.parent = null;
+        //parentObject.SetActive(false);
     }
     public void RemoveObstacle(GameObject remove)
     {

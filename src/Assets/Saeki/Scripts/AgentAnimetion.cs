@@ -35,5 +35,18 @@ public class AgentAnimetion : MonoBehaviour
             Debug.Log("Exit");
             animator.SetTrigger("FallAgein");
         }
+
+        if (playerParameter.Onlife == false)
+        {
+            if (HitFlag)
+            {
+                animator.SetTrigger("RightDeath");
+                animator.SetTrigger("LeftDeath");
+            }       
+            else
+            {
+
+            }
+        }
     }
 }
