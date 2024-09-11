@@ -16,13 +16,25 @@ public class PlayerParameter : MonoBehaviour
     [Space]
     [SerializeField]
     AgentAnimetion agentAnimetion;
+    [SerializeField]
+    MoveDistanceCounter moveDistanceCounter;
+
     public float GetLandingSpeed() => landingSpeed;
     public float GetHitPoint() => hitPoint;
     public bool GetWallHitFlag() => WallHitFlag;
-    public void SetLandingSpeed(float value)
+    public void SetLandingSpeed(float value, bool mode)
     {
-        if (value <= minSpeed || value >= maxSpeed)
-            return;
+
+        if (mode)
+        {
+            if ((landingSpeed > value && value <= minSpeed) || value >= maxSpeed)
+                return;
+        }
+        else
+        {
+            if((landingSpeed > value && value <= minSpeed) || value >= maxSpeed / 2)
+                return;
+        }
         landingSpeed = value;
     }
 
@@ -61,12 +73,16 @@ public class PlayerParameter : MonoBehaviour
     {
         if (WallHitFlag)
         {
-            SetLandingSpeed(landingSpeed - decreaseSpeed);
+            SetLandingSpeed(landingSpeed - decreaseSpeed, true);
             SetHitPoint(hitPoint - decreaseHitPoint);
         }
         else
         {
-            SetLandingSpeed(landingSpeed + addSpeed);
+            
+            if (moveDistanceCounter.GetNowDistanse() > moveDistanceCounter.GettargetDistanse() / 4f)
+                SetLandingSpeed(landingSpeed + addSpeed,true);
+            else
+                SetLandingSpeed(landingSpeed + addSpeed, false);
             SetHitPoint(hitPoint + addHitPoint);
         }
     }
