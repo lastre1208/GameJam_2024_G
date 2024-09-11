@@ -40,7 +40,7 @@ public class MoveDistanceCounter : MonoBehaviour
         }
         Vector3 backImagevector = backImageObject.transform.position;
 
-        backImagevector.y = backImagevector.y < 60f ? landingDistanse / 7000f : 60f;
+        backImagevector.y = backImagevector.y < 69f ? landingDistanse / 5800f : 69f;
        
         backImageObject.transform.position = backImagevector;
     }
