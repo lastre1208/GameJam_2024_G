@@ -8,12 +8,7 @@ public class AgentAnimetion : MonoBehaviour
     Animator animator;
     [SerializeField]
     PlayerParameter playerParameter;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    
 
     public void WallHitAnim(int horizontal)
     {

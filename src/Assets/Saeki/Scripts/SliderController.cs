@@ -9,11 +9,7 @@ public class SliderController : MonoBehaviour
     Slider slider;
     [SerializeField]
     PlayerParameter parameter;
-    void Start()
-    {
-      
-    }
-
+    
     // Update is called once per frame
     void Update()
     {
