@@ -11,6 +11,8 @@ public class MoveDistanceCounter : MonoBehaviour
     [SerializeField]
     GameOverFlag gameOverFlag;
 
+    [SerializeField]
+    GameObject backImageObject;
     float landingDistanse = 0;
 
     bool IsCrear = false;
@@ -35,5 +37,10 @@ public class MoveDistanceCounter : MonoBehaviour
             Debug.Log("Crear!");
             IsCrear = true;
         }
+        Vector3 backImagevector = backImageObject.transform.position;
+
+        backImagevector.y = backImagevector.y < 60f ? landingDistanse / 7000f : 60f;
+       
+        backImageObject.transform.position = backImagevector;
     }
 }
