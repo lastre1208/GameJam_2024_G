@@ -19,6 +19,7 @@ public class ObstacleTouch : MonoBehaviour
                 Debug.Log("Hit!");
           PlayerParameter parameter = other.GetComponent<PlayerParameter>();
             parameter.Onlife = false;
+            parameter.SetFloorFlag();
         }
     }
 }

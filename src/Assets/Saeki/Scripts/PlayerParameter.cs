@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerParameter : MonoBehaviour
 {
-    private bool WallHitFlag;
+    private bool WallHitFlag,OnFloor;
     public bool Onlife = true;
     [SerializeField]
     float landingSpeed,maxSpeed, minSpeed;
@@ -22,6 +22,10 @@ public class PlayerParameter : MonoBehaviour
     public float GetLandingSpeed() => landingSpeed;
     public float GetHitPoint() => hitPoint;
     public bool GetWallHitFlag() => WallHitFlag;
+
+    public bool GetFloorFlag() => OnFloor;
+
+    public void SetFloorFlag() => OnFloor = true;
     public void SetLandingSpeed(float value, bool mode)
     {
 
@@ -58,6 +62,7 @@ public class PlayerParameter : MonoBehaviour
     }
     private void Start()
     {
+        OnFloor = false;
         WallHitFlag = false;
     }
     private void Update()
