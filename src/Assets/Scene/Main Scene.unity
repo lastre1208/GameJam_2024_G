@@ -2027,7 +2027,7 @@ PrefabInstance:
       objectReference: {fileID: 2119417539}
     - target: {fileID: 340871647987233642, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: decreaseHitPoint
-      value: 0.05
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 1467448477908622524, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: m_Enabled
