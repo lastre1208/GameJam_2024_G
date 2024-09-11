@@ -20,7 +20,7 @@ public class BrakeMove : MonoBehaviour
         if(collision.gameObject.CompareTag("Hand")) {
             GameObject child = collision.transform.GetChild(0).gameObject;
             PlayerParameter playerParameter = child.GetComponent<PlayerParameter>();
-            playerParameter.SetFlag(true);
+            playerParameter.SetFlag(true, transform.position.x - child.transform.position.x);
         }
     }
 
@@ -30,7 +30,7 @@ public class BrakeMove : MonoBehaviour
         {
             GameObject child = collision.transform.GetChild(0).gameObject;
             PlayerParameter playerParameter = child.GetComponent<PlayerParameter>();
-            playerParameter.SetFlag(false);
+            playerParameter.SetFlag(false,0);
         }
     }
 }
