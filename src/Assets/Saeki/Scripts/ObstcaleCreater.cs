@@ -31,8 +31,6 @@ public class ObstcaleCreater : MonoBehaviour
         if (gameOverFlag.GetGameOver()|| counter.GetCrear())    
             return;
         
-           
-
         timeCount += Time.deltaTime;
         if(timeCount > CreateTimeInterval)
         {
@@ -47,9 +45,6 @@ public class ObstcaleCreater : MonoBehaviour
         int random = Random.Range(-range,range);
         return random == BeforeValue ? GetRandomNum(range) : random;
     }
-
-
-
 
     void Createobstcale(GameObject[] prehabs)
     {

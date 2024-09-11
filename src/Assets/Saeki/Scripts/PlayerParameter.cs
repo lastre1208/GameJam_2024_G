@@ -28,7 +28,6 @@ public class PlayerParameter : MonoBehaviour
     public void SetFloorFlag() => OnFloor = true;
     public void SetLandingSpeed(float value, bool mode)
     {
-
         if (mode)
         {
             if ((landingSpeed > value && value <= minSpeed) || value >= maxSpeed)
@@ -60,12 +59,12 @@ public class PlayerParameter : MonoBehaviour
         else
             agentAnimetion.WallHitAnim(1);
     }
-    private void Start()
+    void Start()
     {
         OnFloor = false;
         WallHitFlag = false;
     }
-    private void Update()
+    void Update()
     {
         if (Onlife)
             fluctuation();
@@ -82,8 +81,7 @@ public class PlayerParameter : MonoBehaviour
             SetHitPoint(hitPoint - decreaseHitPoint);
         }
         else
-        {
-            
+        {            
             if (moveDistanceCounter.GetNowDistanse() > moveDistanceCounter.GettargetDistanse() / 4f)
                 SetLandingSpeed(landingSpeed + addSpeed,true);
             else
