@@ -9,9 +9,12 @@ public class TitleManager : MonoBehaviour
     // Start is called before the first frame update
     private bool creditNow = false;
     [SerializeField] GameObject Credit;
+    AudioSource audioSource;
+    public AudioClip clip;
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         Credit.SetActive(creditNow);
     }
     // Update is called once per frame
@@ -24,6 +27,7 @@ public class TitleManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space)) {
 
             ToggleCredit();
+            
         }
     }
     void StartGame()
@@ -32,6 +36,7 @@ public class TitleManager : MonoBehaviour
     }
     void ToggleCredit()
     {
+        audioSource.PlayOneShot(clip);
         creditNow = !creditNow;
         Credit.SetActive(creditNow);
 
