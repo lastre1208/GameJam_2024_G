@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1843,10 +1843,14 @@ MonoBehaviour:
   counter: {fileID: 1699438960}
   gameOverFlag: {fileID: 1699438962}
   obstcalesPrehab:
-  - {fileID: 570216904917371534, guid: 14fab4fd2e6692c43a9b26838939fddb, type: 3}
-  - {fileID: 874295126150278071, guid: 1d915e9932bc3b9438b38ea10c9d20f8, type: 3}
-  CreateDistanseRange: 10
-  CreateTimeInterval: 1.2
+  - {fileID: 5951511019118612499, guid: 20b7c25f5231d664e8bf272e21021ed1, type: 3}
+  - {fileID: 1415452314175959659, guid: 80432cf7bda95c94b85883593c64cb79, type: 3}
+  - {fileID: 1647802156210913229, guid: 7a870fc119d054b42b308a4f8dbb6b15, type: 3}
+  - {fileID: 9222606968150451712, guid: e2a94f15e231f27449ac2c7d97a9f52e, type: 3}
+  - {fileID: 4299450306318460253, guid: a793050d0b201354a8ac920becb6fa78, type: 3}
+  - {fileID: 3730963482362228950, guid: f86ca8cce599238429cde612a48e33b1, type: 3}
+  CreateDistanseRange: 0
+  CreateTimeInterval: 1.3
 --- !u!4 &2028009179
 Transform:
   m_ObjectHideFlags: 0
@@ -1978,11 +1982,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 340871647987233642, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: addSpeed
-      value: 0.005
+      value: 0.007
       objectReference: {fileID: 0}
     - target: {fileID: 340871647987233642, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: maxSpeed
-      value: 28
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 340871647987233642, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
+      propertyPath: minSpeed
+      value: 8.5
       objectReference: {fileID: 0}
     - target: {fileID: 340871647987233642, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: addHitPoint
@@ -1990,15 +1998,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 340871647987233642, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: landingSpeed
-      value: 2
+      value: 10.1
       objectReference: {fileID: 0}
     - target: {fileID: 340871647987233642, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: decreaseSpeed
-      value: 0.05
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 340871647987233642, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: decreaseHitPoint
-      value: 0.05
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1719357578052683276, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2046,7 +2054,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1966821610267650566, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: m_Mass
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1966821610267650566, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: m_AngularDrag
@@ -2086,7 +2094,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4503060823170681404, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: moveSpeed
-      value: 6.5
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 4674036199924942588, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: m_Name

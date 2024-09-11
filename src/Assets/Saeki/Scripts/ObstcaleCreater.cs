@@ -43,6 +43,7 @@ public class ObstcaleCreater : MonoBehaviour
 
     int GetRandomNum(int range)
     {
+        if(range == 0)return 0;
         int random = Random.Range(-range,range);
         return random == BeforeValue ? GetRandomNum(range) : random;
     }
