@@ -14,7 +14,9 @@ public class OceanMove : MonoBehaviour
     GameOverFlag gameOverFlag;
 
     [SerializeField]
-    GameObject ClearObject, offActiveObject;
+    GameObject[] ClearObjects;
+    [SerializeField]
+    GameObject offActiveObject;
 
     public void AnimatorMove()
     {
@@ -28,7 +30,10 @@ public class OceanMove : MonoBehaviour
     }
     public void ClearFlag()
     {
-        ClearObject.SetActive(true);
+        foreach (var objects in ClearObjects)
+        {
+            objects.SetActive(true);
+        }
         offActiveObject.SetActive(false);
     }
 
