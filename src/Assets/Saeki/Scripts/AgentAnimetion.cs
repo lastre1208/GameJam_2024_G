@@ -37,15 +37,16 @@ public class AgentAnimetion : MonoBehaviour
 
         if (playerParameter.Onlife == false)
         {
-            if (HitFlag)
+            if(playerParameter.GetFloorFlag())
+                animator.SetTrigger("FloorDeath");
+
+            else if (HitFlag)
             {
                 animator.SetTrigger("RightDeath");
                 animator.SetTrigger("LeftDeath");
             }       
-            else
-            {
-
-            }
+            else    
+                animator.SetTrigger("FloorDeath");         
         }
     }
 }
