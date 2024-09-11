@@ -32,7 +32,6 @@ public class AgentAnimetion : MonoBehaviour
       
         if (HitFlag == false)
         {
-            Debug.Log("Exit");
             animator.SetTrigger("FallAgein");
         }
 

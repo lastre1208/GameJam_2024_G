@@ -399,12 +399,12 @@ GameObject:
   m_Component:
   - component: {fileID: 299373843}
   m_Layer: 0
-  m_Name: ClearUI
+  m_Name: textUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &299373843
 RectTransform:
   m_ObjectHideFlags: 0
@@ -753,7 +753,7 @@ GameObject:
   - component: {fileID: 1062981779}
   - component: {fileID: 1062981778}
   m_Layer: 5
-  m_Name: TextEnter
+  m_Name: TextRetry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -775,7 +775,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -320}
+  m_AnchoredPosition: {x: 0, y: -280}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1062981778
@@ -798,7 +798,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: R To Retray Game
+  m_text: R To Retry Game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1397,7 +1397,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -420}
+  m_AnchoredPosition: {x: 0, y: -380}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1459544695
@@ -1612,6 +1612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parameter: {fileID: 526056931}
+  UIobject: {fileID: 299373842}
 --- !u!1 &1703588555
 GameObject:
   m_ObjectHideFlags: 0
@@ -2316,6 +2317,10 @@ PrefabInstance:
       propertyPath: decreaseHitPoint
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 340871647987233642, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
+      propertyPath: moveDistanceCounter
+      value: 
+      objectReference: {fileID: 1699438960}
     - target: {fileID: 1467448477908622524, guid: 889bdb51832dd2c4399458c6d44fd467, type: 3}
       propertyPath: m_Enabled
       value: 0

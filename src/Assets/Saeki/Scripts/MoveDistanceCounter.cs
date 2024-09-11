@@ -17,7 +17,8 @@ public class MoveDistanceCounter : MonoBehaviour
 
     bool IsCrear = false;
 
-
+    public float GetNowDistanse() => landingDistanse;
+    public float GettargetDistanse() => DistanseLimit;
     public bool GetCrear() => IsCrear;
     // Start is called before the first frame update
     void Start()
