@@ -5,7 +5,7 @@ __タイトル名：『擦りーふぉーる』(Suri-Fall)__
 # 作品紹介
 __ダウンロード__
 
-URL ： https://github.com/saeki7036/GameJam_2024_G/releases/download/Var1.0.3/Var1_0_4.zip
+URL ： https://github.com/saeki7036/GameJam_2024_G/releases/download/Var1.0.4/Var1_0_4.zip
 
 圧縮ファイル内のsrc.exeを起動して遊べます。
 # ゲームについて
