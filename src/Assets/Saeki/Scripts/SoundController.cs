@@ -19,7 +19,7 @@ public class SoundController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(playerParameter.Onlife == false)
         {
@@ -33,11 +33,6 @@ public class SoundController : MonoBehaviour
         {
             Shoutflag = false;
             Shout.Stop();
-        }
-
-        if (moveDistanceCounter.GetCrear())
-        {
-            Invoke("ClearOneShot", 1.5f);
         }
     }
 
@@ -58,7 +53,7 @@ public class SoundController : MonoBehaviour
         Death.PlayOneShot(Death.clip);
     }
 
-    void ClearOneShot()
+    public void ClearOneShot()
     {
         if (ClearFlag)
             return;

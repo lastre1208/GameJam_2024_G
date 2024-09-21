@@ -6,12 +6,17 @@ using UnityEngine.SceneManagement;
 public class GameManeger : MonoBehaviour
 {
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.R))
         {
             Scene loadScene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(loadScene.name);
+        }
+
+        if (Input.GetKey(KeyCode.E)&& Input.GetKey(KeyCode.T))
+        {
+            SceneManager.LoadScene("Title");
         }
 
         if (Input.GetKey(KeyCode.Escape))
