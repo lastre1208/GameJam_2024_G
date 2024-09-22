@@ -14,7 +14,7 @@ public class GameOverFlag : MonoBehaviour
     public bool GetGameOver() => isGameOver;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (!parameter.Onlife) { SetGameOver();}
 

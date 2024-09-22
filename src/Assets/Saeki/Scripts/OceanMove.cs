@@ -14,7 +14,10 @@ public class OceanMove : MonoBehaviour
     GameOverFlag gameOverFlag;
 
     [SerializeField]
+    SoundController soundController;
+    [SerializeField]
     GameObject[] ClearObjects;
+
     [SerializeField]
     GameObject offActiveObject;
 
@@ -30,15 +33,18 @@ public class OceanMove : MonoBehaviour
     }
     public void ClearFlag()
     {
+        if (gameOverFlag.GetGameOver())
+            return;
         foreach (var objects in ClearObjects)
         {
             objects.SetActive(true);
         }
         offActiveObject.SetActive(false);
+        soundController.ClearOneShot();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (counter.GetCrear()) AnimatorMove();
 

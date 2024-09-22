@@ -4,12 +4,43 @@ using UnityEngine;
 
 public class BrakeMove : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private bool Onbrake,brakeCap;
+    GameObject child;
+    PlayerParameter playerParameter;
+    private void Start()
     {
-        if(collision.gameObject.CompareTag("Hand")) {
-            GameObject child = collision.transform.GetChild(0).gameObject;
-            PlayerParameter playerParameter = child.GetComponent<PlayerParameter>();
-            playerParameter.SetFlag(true, transform.position.x - child.transform.position.x);
+        Onbrake = false;
+        brakeCap = true;
+    }
+
+    void FixedUpdate()
+    {
+        if (Onbrake)
+        {
+            if (brakeCap == true)
+            {
+                playerParameter.SetFlag(true, transform.position.x - child.transform.position.x);
+                brakeCap = false;
+            }        
+        }
+        else
+        {
+            if (brakeCap == false)
+            {
+                playerParameter.SetFlag(false, 0);
+                brakeCap = true;
+            }
+        }             
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Hand"))
+        {
+            child = collision.transform.GetChild(0).gameObject;
+            playerParameter = child.GetComponent<PlayerParameter>();
+            //playerParameter.SetFlag(true, transform.position.x - child.transform.position.x);
+            Onbrake = true;
         }
     }
 
@@ -17,9 +48,10 @@ public class BrakeMove : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Hand"))
         {
-            GameObject child = collision.transform.GetChild(0).gameObject;
-            PlayerParameter playerParameter = child.GetComponent<PlayerParameter>();
-            playerParameter.SetFlag(false,0);
+            child = collision.transform.GetChild(0).gameObject;
+            playerParameter = child.GetComponent<PlayerParameter>();
+            //playerParameter.SetFlag(false,0);
+            Onbrake = false;
         }
     }
 }

@@ -22,20 +22,21 @@ public class MoveDistanceCounter : MonoBehaviour
     public bool GetCrear() => IsCrear;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (gameOverFlag.GetGameOver())
             return;
 
         landingDistanse += parameter.GetLandingSpeed();
-        if(DistanseLimit <= landingDistanse)
+        Debug.Log(landingDistanse);
+        if (DistanseLimit <= landingDistanse)
         {
-            Debug.Log("Crear!");
+            landingDistanse = DistanseLimit;
             IsCrear = true;
         }
         Vector3 backImagevector = backImageObject.transform.position;
 
-        backImagevector.y = backImagevector.y < 69f ? landingDistanse / 5800f : 69f;
+        backImagevector.y = backImagevector.y < 45f ? landingDistanse / 500f : 45f;
        
         backImageObject.transform.position = backImagevector;
     }

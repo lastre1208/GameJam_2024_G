@@ -11,7 +11,7 @@ public class SliderController : MonoBehaviour
     PlayerParameter parameter;
     
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         slider.value = parameter.GetHitPoint();
     }

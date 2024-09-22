@@ -7,7 +7,7 @@ public class PlayerParameter : MonoBehaviour
     [SerializeField]
     float landingSpeed,maxSpeed, minSpeed;
     [SerializeField]
-    float addSpeed, decreaseSpeed;
+    float addSpeed, decreaseSpeed,limitSpeed;
 
     [SerializeField]
     float hitPoint,maxPoint, minPoint;
@@ -35,7 +35,7 @@ public class PlayerParameter : MonoBehaviour
         }
         else
         {
-            if((landingSpeed > value && value <= minSpeed) || value >= maxSpeed / 2)
+            if((landingSpeed > value && value <= minSpeed) || value >= limitSpeed)
                 return;
         }
         landingSpeed = value;
@@ -64,7 +64,7 @@ public class PlayerParameter : MonoBehaviour
         OnFloor = false;
         WallHitFlag = false;
     }
-    void Update()
+    void FixedUpdate()
     {
         if (Onlife)
             fluctuation();

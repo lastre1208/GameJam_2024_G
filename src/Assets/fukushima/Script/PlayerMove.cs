@@ -7,7 +7,7 @@ public class PlayerMove : MonoBehaviour
     public float moveLimit = 8f;
    public  Rigidbody rb;
     [SerializeField] PlayerParameter parameter;
-    void Update()
+    void FixedUpdate()
     {
         if (parameter.Onlife)
         {
@@ -45,7 +45,8 @@ public class PlayerMove : MonoBehaviour
         }
         else
         {
-            rb.velocity = Vector3.zero;
+            if(rb.isKinematic == false)
+                rb.velocity = Vector3.zero;
             rb.isKinematic = true;
         }
     }

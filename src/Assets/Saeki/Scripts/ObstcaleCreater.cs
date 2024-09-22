@@ -13,16 +13,13 @@ public class ObstcaleCreater : MonoBehaviour
     GameObject[] obstcalesPrehab;
 
     [SerializeField]
-    int CreateDistanseRange;
-
-    [SerializeField]
     float CreateTimeInterval;
 
     float timeCount = 0;
 
     int BeforeValue = 0;
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (gameOverFlag.GetGameOver()|| counter.GetCrear())    
             return;
@@ -50,7 +47,7 @@ public class ObstcaleCreater : MonoBehaviour
         int RandomNum = Random.Range(0, prehabs.Length);
 
         Vector3 CreatePos = transform.position;
-        CreatePos.x = (float)GetRandomNum(CreateDistanseRange);
+        CreatePos.x = 0f;
 
         GameObject gameObject = GameObject.Instantiate(prehabs[RandomNum],
            CreatePos, Quaternion.identity);

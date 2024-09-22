@@ -9,9 +9,9 @@ public class LimitMove : MonoBehaviour
     [SerializeField] float Limitmove;
 
  
-    private void Update()
+    private void FixedUpdate()
     {
-        if (transform.position.x > Limitmove || transform.position.x < Limitmove * -1)
+        if (transform.position.x >= Limitmove || transform.position.x <= Limitmove * -1)
         {
             Vector3 currentpos=transform.position;
           
