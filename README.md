@@ -30,6 +30,10 @@ __操作方法__
 * ESCキー：終了
 
 __プレイ動画__
+<video controls width="640">
+  <source src="https://saeki7036.github.io/GameJam_2024_G/src/Assets/Movie/M_01.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 https://saeki7036.github.io/GameJam_2024_G/src/Assets/Movie/M_01.mp4
 
 # 製作情報
