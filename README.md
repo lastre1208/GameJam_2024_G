@@ -13,7 +13,7 @@ __男が突然フリーフォール！死なないように壁をこすって海
 
 __ダウンロード__
 
-URL ： https://github.com/saeki7036/GameJam_2024_G/releases/download/Var1.0.4/Var1_0_4.zip
+URL (Windows)： https://github.com/saeki7036/GameJam_2024_G/releases/download/Var1.0.4/Var1_0_4.zip
 
 圧縮ファイル内のsrc.exeを起動して遊べます。
 # ゲームについて
