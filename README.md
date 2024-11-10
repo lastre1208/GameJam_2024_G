@@ -30,8 +30,11 @@ __操作方法__
 * ESCキー：終了
 
 __プレイ動画__
-[動画再生](https://saeki7036.github.io/GameJam_2024_G/src/InLineMovie.html)
 https://saeki7036.github.io/GameJam_2024_G/src/Assets/Movie/M_01.mp4
+
+htmlリンク
+[動画再生](https://saeki7036.github.io/GameJam_2024_G/src/InLineMovie.html)
+
 
 # 製作情報
 作品テーマ課題：『痛い』
