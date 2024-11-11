@@ -13,7 +13,7 @@ __男が突然フリーフォール！死なないように壁をこすって海
 
 __ダウンロード__
 
-URL ： https://github.com/saeki7036/GameJam_2024_G/releases/download/Var1.0.4/Var1_0_4.zip
+URL (Windows)： https://github.com/saeki7036/GameJam_2024_G/releases/download/Var1.0.4/Var1_0_4.zip
 
 圧縮ファイル内のsrc.exeを起動して遊べます。
 # ゲームについて
@@ -28,6 +28,13 @@ __操作方法__
 * 移動中に降ってくる障害物に擦れる：擦り状態
 * Rキー：リトライ
 * ESCキー：終了
+
+__プレイ動画__
+https://saeki7036.github.io/GameJam_2024_G/src/Assets/Movie/M_01.mp4
+
+htmlリンク
+[動画再生](https://saeki7036.github.io/GameJam_2024_G/src/InLineMovie.html)
+
 
 # 製作情報
 作品テーマ課題：『痛い』
